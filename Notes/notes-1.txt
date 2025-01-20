@@ -1,0 +1,33 @@
+Notes => 
+
+// 1.> Do not use here "handleClick()" like this because it will execute on when
+//     <button onClick={handleClick}>{props.children}</button> this line will execute
+//     thus it will execute "handleClick" only on button click.
+
+export default function TabButton({children}) {
+    function handleClick() {}
+
+    return (
+        <li>
+            <button onClick={handleClick}>{children}</button>
+        </li>
+    );
+}
+
+
+// 2.> When we pass the function as prop value it must be start with "on" 
+//     such as onMove, onClick and so on....
+
+export default function TabButton({children}) {
+    function handleClick() {}
+
+    return (
+        <li>
+            <button onClick={handleClick}>{children}</button>
+        </li>
+    );
+}
+
+
+
+
